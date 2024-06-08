@@ -2,4 +2,4 @@ from django.contrib import admin
 from django.urls import path
 from main.views import *
 
-urlpatterns = [path("admin/", admin.site.urls), path("", index, name="index")]
+urlpatterns = [path("admin/", admin.site.urls), path("", index, name="index"), path("shop", shop, name="shop")]
