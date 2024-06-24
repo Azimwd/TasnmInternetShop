@@ -1,0 +1,42 @@
+[
+    {
+        "model": "goods.categories",
+        "pk": 2,
+        "fields": {
+            "name": "��� ������",
+            "slug": "all"
+        }
+    },
+    {
+        "model": "goods.categories",
+        "pk": 4,
+        "fields": {
+            "name": "������� � ��������",
+            "slug": "rubashki-i-futbolki"
+        }
+    },
+    {
+        "model": "goods.categories",
+        "pk": 5,
+        "fields": {
+            "name": "�����",
+            "slug": "obuv"
+        }
+    },
+    {
+        "model": "goods.categories",
+        "pk": 6,
+        "fields": {
+            "name": "�����",
+            "slug": "bryuki"
+        }
+    },
+    {
+        "model": "goods.categories",
+        "pk": 7,
+        "fields": {
+            "name": "������",
+            "slug": "kurtki"
+        }
+    }
+]

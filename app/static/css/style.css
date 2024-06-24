@@ -4622,7 +4622,7 @@ input.cart-plus-minus-box {
 }
 .contact-img-area {
   background-color: transparent;
-  background-image: url("img/bg-banner/bg-pagetitle.jpg");
+  background-image: url("../img/bg-banner/bg-pagetitle.jpg");
   background-position: center top;
   background-repeat: no-repeat;
   padding: 200px 0 100px;
@@ -4677,6 +4677,15 @@ h2.page-title {
   width: 17px;
 }
 
-/*====================================================================
-							[ END ]
-======================================================================*/
+h2 h1{
+  color: red;
+}
+
+.amount2.ana.nosell{
+  margin-right: 3%;
+  text-decoration: line-through; 
+}
+
+.tb-product-price.font-noraure-3 h4{
+  margin-top: 2%;
+}
