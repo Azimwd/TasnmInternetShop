@@ -149,11 +149,10 @@
 
                                                         <li>
                                                             
-                                                            <a href="#">все товары</a>
-                                                            <a href="#">рубашки и футболки</a>
-                                                            <a href="#">shoes</a>
-                                                            <a href="#">брюки</a>
-                                                            <a href="#">jackets</a>
+															{% tag_categories as categories%}
+                                                            {% for i in categories%}
+                                                                <a href="{% url 'catalog:index' %}">{{i.name}}</a>
+                                                            {% endfor %}
                                                         </li>
 
                                                     </ul>

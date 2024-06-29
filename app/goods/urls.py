@@ -4,6 +4,7 @@ from goods.views import *
 app_name = 'goods'
 
 urlpatterns = [
-    path("", shop, name = "index"),
-    path("singleproduct/", singleproduct, name = "singleproduct"),  
+    path('', catalog, name = 'index'),
+    path('product/<int:product_id>/', product, name = 'product'),
+    # path("singleproduct/", singleproduct, name = "singleproduct"),  
 ]
