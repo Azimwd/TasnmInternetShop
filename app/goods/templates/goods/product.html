@@ -28,54 +28,96 @@
                                 <div class="pro-img-tab-content tab-content">
                                     <div class="tab-pane active" id="image-1">
                                         <div class="simpleLens-big-image-container">
-                                            <a class="simpleLens-lens-image" data-lightbox="roadtrip" data-lens-image="{{product.image.url}}" href="{{product.image.url}}">
-                                                <img src="{{product.image.url}} " alt="" class="simpleLens-big-image">
-                                            </a>
+                                            {% if product.image %}
+                                                <a class="simpleLens-lens-image" data-lightbox="roadtrip" data-lens-image="{{product.image.url}}" href="{{product.image.url}}">
+                                                    <img src="{{product.image.url}} " alt="" class="simpleLens-big-image">
+                                                </a>
+                                            {% else %}
+                                                <a class="simpleLens-lens-image" data-lightbox="roadtrip" data-lens-image="{% static 'img/products/1.jpg' %}" href="{% static 'img/products/1.jpg' %}">
+                                                    <img src="{% static 'img/products/1.jpg' %} " alt="" class="simpleLens-big-image">
+                                                </a>
+                                            {% endif %}
+                                            
                                         </div>
                                     </div>
                                     <div class="tab-pane" id="image-2">
                                         <div class="simpleLens-big-image-container">
-                                            <a class="simpleLens-lens-image" data-lightbox="roadtrip" data-lens-image="{{product.image.url}}" href="{{product.image.url}}">
-                                                <img src="{{product.image.url}}" alt="" class="simpleLens-big-image">
-                                            </a>
+                                            {% if product.image2 %}
+                                                <a class="simpleLens-lens-image" data-lightbox="roadtrip" data-lens-image="{{product.image2.url}}" href="{{product.image2.url}}">
+                                                    <img src="{{product.image2.url}}" alt="" class="simpleLens-big-image">
+                                                </a>
+                                            {% else %}
+                                                <a class="simpleLens-lens-image" data-lightbox="roadtrip" data-lens-image="{% static 'img/products/1.jpg' %}" href="{% static 'img/products/1.jpg' %}">
+                                                    <img src="{% static 'img/products/1.jpg' %} " alt="" class="simpleLens-big-image">
+                                                </a>
+                                            {% endif %}
+
                                         </div>
                                     </div>
                                     <div class="tab-pane" id="image-3">
                                         <div class="simpleLens-big-image-container">
-                                            <a class="simpleLens-lens-image" data-lightbox="roadtrip" data-lens-image="{{product.image.url}}" href="{{product.image.url}}">
-                                                <img src="{{product.image.url}}" alt="" class="simpleLens-big-image">
-                                            </a>
+
+                                            {% if product.image3 %}
+                                                <a class="simpleLens-lens-image" data-lightbox="roadtrip" data-lens-image="{{product.image3.url}}" href="{{product.image3.url}}">
+                                                    <img src="{{product.image3.url}}" alt="" class="simpleLens-big-image">
+                                                </a>
+                                            {% else %}
+                                                <a class="simpleLens-lens-image" data-lightbox="roadtrip" data-lens-image="{% static 'img/products/1.jpg' %}" href="{% static 'img/products/1.jpg' %}">
+                                                    <img src="{% static 'img/products/1.jpg' %} " alt="" class="simpleLens-big-image">
+                                                </a>
+                                            {% endif %}
                                         </div>
                                     </div>
                                     <div class="tab-pane" id="image-4">
                                         <div class="simpleLens-big-image-container">
-                                            <a class="simpleLens-lens-image" data-lightbox="roadtrip" data-lens-image="{{product.image.url}}" href="{{product.image.url}}">
-                                                <img src="{{product.image.url}}" alt="" class="simpleLens-big-image">
-                                            </a>
+                                            {% if product.image4 %}
+                                                <a class="simpleLens-lens-image" data-lightbox="roadtrip" data-lens-image="{{product.image4.url}}" href="{{product.image4.url}}">
+                                                    <img src="{{product.image4.url}}" alt="" class="simpleLens-big-image">
+                                                </a>
+                                            {% else %}
+                                                <a class="simpleLens-lens-image" data-lightbox="roadtrip" data-lens-image="{% static 'img/products/1.jpg' %}" href="{% static 'img/products/1.jpg' %}">
+                                                    <img src="{% static 'img/products/1.jpg' %} " alt="" class="simpleLens-big-image">
+                                                </a>
+                                            {% endif %}
+
                                         </div>
                                     </div>
                                     <div class="tab-pane" id="image-5">
                                         <div class="simpleLens-big-image-container">
-                                            <a class="simpleLens-lens-image" data-lightbox="roadtrip" data-lens-image="{{product.image.url}}" href="{{product.image.url}}">
-                                                <img src="{{product.image.url}}" alt="" class="simpleLens-big-image">
-                                            </a>
+                                            {% if product.image5 %}
+                                                <a class="simpleLens-lens-image" data-lightbox="roadtrip" data-lens-image="{{product.image5.url}}" href="{{product.image5.url}}">
+                                                    <img src="{{product.image5.url}}" alt="" class="simpleLens-big-image">
+                                                </a>
+                                            {% else %}
+                                                <a class="simpleLens-lens-image" data-lightbox="roadtrip" data-lens-image="{% static 'img/products/1.jpg' %}" href="{% static 'img/products/1.jpg' %}">
+                                                    <img src="{% static 'img/products/1.jpg' %} " alt="" class="simpleLens-big-image">
+                                                </a>
+                                            {% endif %}
+
                                         </div>
                                     </div>
                                     <div class="tab-pane" id="image-6">
                                         <div class="simpleLens-big-image-container">
-                                            <a class="simpleLens-lens-image" data-lightbox="roadtrip" data-lens-image="{{product.image.url}}" href="{{product.image.url}}">
-                                                <img src="{{product.image.url}}" alt="" class="simpleLens-big-image">
-                                            </a>
+                                            {% if product.image6 %}
+                                                <a class="simpleLens-lens-image" data-lightbox="roadtrip" data-lens-image="{{product.image6.url}}" href="{{product.image6.url}}">
+                                                    <img src="{{product.image6.url}}" alt="" class="simpleLens-big-image">
+                                                </a>
+                                            {% else %}
+                                                <a class="simpleLens-lens-image" data-lightbox="roadtrip" data-lens-image="{% static 'img/products/1.jpg' %}" href="{% static 'img/products/1.jpg' %}">
+                                                    <img src="{% static 'img/products/1.jpg' %} " alt="" class="simpleLens-big-image">
+                                                </a>
+                                            {% endif %}
+
                                         </div>
                                     </div>
                                 </div>
                                 <div class="pro-img-tab-slider indicator-style2">
                                     <div class="item"><a href="#image-1" data-toggle="tab"><img src="{{product.image.url}}" alt="" /></a></div>
-                                    <div class="item"><a href="#image-2" data-toggle="tab"><img src="{{product.image.url}}" alt="" /></a></div>
-                                    <div class="item"><a href="#image-3" data-toggle="tab"><img src="{{product.image.url}}" alt="" /></a></div>
-                                    <div class="item"><a href="#image-4" data-toggle="tab"><img src="{{product.image.url}}" alt="" /></a></div>
-                                    <div class="item"><a href="#image-5" data-toggle="tab"><img src="{{product.image.url}}" alt="" /></a></div>
-                                    <div class="item"><a href="#image-6" data-toggle="tab"><img src="{{product.image.url}}" alt="" /></a></div>
+                                    <div class="item"><a href="#image-2" data-toggle="tab"><img src="{{product.image2.url}}" alt="" /></a></div>
+                                    <div class="item"><a href="#image-3" data-toggle="tab"><img src="{{product.image3.url}}" alt="" /></a></div>
+                                    <div class="item"><a href="#image-4" data-toggle="tab"><img src="{{product.image4.url}}" alt="" /></a></div>
+                                    <div class="item"><a href="#image-5" data-toggle="tab"><img src="{{product.image5.url}}" alt="" /></a></div>
+                                    <div class="item"><a href="#image-6" data-toggle="tab"><img src="{{product.image6.url}}" alt="" /></a></div>
                                 </div>
                             </div>
                             <div class="col-md-6 col-sm-6">

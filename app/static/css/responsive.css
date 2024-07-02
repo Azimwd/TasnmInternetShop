@@ -200,8 +200,10 @@
     .header-top {
         display: none;
     }
+
     .right-header ul.drop-cart, .mainmenu ul li ul {
         right: -36px;
+        
     }
     #searchform {
         right: -34px;
@@ -603,8 +605,7 @@
 }
     .contact-img-area {
   padding: 81px 0 77px;
-}
-    
+} 
 }
 /* Large Mobile :480px. */
 @media only screen and (min-width: 480px) and (max-width: 767px) {

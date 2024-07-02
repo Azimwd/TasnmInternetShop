@@ -23,6 +23,11 @@ class Products(models.Model):
     )
     description = models.TextField(blank=True, null=True)
     image = models.ImageField(upload_to="goods_images", blank=True, null=True)
+    image2 = models.ImageField(upload_to="goods_images", blank=True, null=True)
+    image3 = models.ImageField(upload_to="goods_images", blank=True, null=True)
+    image4 = models.ImageField(upload_to="goods_images", blank=True, null=True)
+    image5 = models.ImageField(upload_to="goods_images", blank=True, null=True)
+    image6 = models.ImageField(upload_to="goods_images", blank=True, null=True)
     price = models.DecimalField(
         default=0.00, max_digits=7, decimal_places=2, blank=True, null=True
     )

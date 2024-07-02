@@ -45,7 +45,7 @@
                                                         </div>
                                                         <div class="re-img">
                                                             {% if product.image %}
-                                                                <a href="#"><img src="{{product.image.url}}" alt="" /></a>
+                                                                <a href="{% url 'catalog:product' product.slug %}"><img src="{{product.image.url}}" alt="" /></a>
                                                             {% else %}
                                                                 <a href="#"><img src="{% static 'img/products/1.jpg' %}" alt="" /></a>
                                                             {% endif %}
@@ -55,7 +55,7 @@
                                                 <div class="col-md-8 col-sm-8">
                                                     <div class="f-fix">
                                                         <div class="tb-beg">
-                                                            <a href="#">{{product.name}}</a>
+                                                            <a href="{% url 'catalog:product' product.slug %}">{{product.name}}</a>
                                                         </div>
                                                         <div class="tb-product-wrap-price-rating">
                                                             <div class="tb-product-price font-noraure-3">

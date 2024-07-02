@@ -9,13 +9,10 @@ def catalog(request):
     return render(request, "goods/shop.html",context)
 
 
-def product(request, product_id):
-    product = Products.objects.get(id = product_id)
+def product(request, product_slug):
+    productslug = Products.objects.get(slug = product_slug)
 
     context = {
-        'product': product
+        'product': productslug
     }
     return render(request, "goods/product.html", context = context)
-
-# def singleproduct(request):
-#     return render(request, "goods/single-product.html")
