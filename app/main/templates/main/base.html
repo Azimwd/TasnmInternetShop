@@ -90,8 +90,8 @@
                                                     <ul class="again">
                                                         <li class="single-menu colmd4">
 															{% tag_categories as categories%}
-                                                            {% for i in categories%}
-                                                                <a href="{% url 'catalog:index' %}">{{i.name}}</a>
+                                                            {% for category in categories%}
+                                                                <a href="{% url 'catalog:index' category.slug %}">{{category.name}}</a>
                                                             {% endfor %}
                                                         </li>
 
@@ -119,8 +119,8 @@
                                                         <li>
                                                             
 															{% tag_categories as categories%}
-                                                            {% for i in categories%}
-                                                                <a href="{% url 'catalog:index' %}">{{i.name}}</a>
+                                                            {% for category in categories%}
+                                                                <a href="{% url 'catalog:index' category.slug %}">{{category.name}}</a>
                                                             {% endfor %}
                                                         </li>
 
