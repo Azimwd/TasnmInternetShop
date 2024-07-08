@@ -4690,3 +4690,52 @@ h2 h1{
   margin-top: 2%;
 }
 
+.goods_sort{
+  margin-top: 3%;
+  margin-left: 19.4%;
+  display: block;
+}
+
+.goods_sort button{
+ border-color: #666666;
+ background-color: #666666;
+}
+
+.goods_sort button:hover{
+  background-color: #6f6f6f;
+ }
+
+ @media (max-width: 915px){
+  .goods_sort{
+    margin-top: 3%;
+    margin-left: 13%;
+    display: block;
+  }
+  
+  .goods_sort button{
+   border-color: #666666;
+   background-color: #666666;
+  }
+  
+  .goods_sort button:hover{
+    background-color: #6f6f6f;
+  }
+  
+}
+
+@media only screen and (min-device-width: 768px) and (max-device-width: 1024px) {
+  .goods_sort{
+    margin-top: 3%;
+    margin-left: 3.5%;
+    display: block;
+  }
+  
+  .goods_sort button{
+   border-color: #666666;
+   background-color: #666666;
+  }
+  
+  .goods_sort button:hover{
+    background-color: #6f6f6f;
+  }
+}

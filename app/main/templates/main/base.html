@@ -135,8 +135,8 @@
                                 <div class="right-header re-right-header">
                                     <ul>
                                         <li class="re-icon tnm"><i class="fa fa-search" aria-hidden="true"></i>
-                                            <form method="get" id="searchform" action="#">
-                                                <input type="text" value="" name="s" id="ws" placeholder="Search product..." />
+                                            <form method="get" id="searchform" action="{% url "catalog:search" %}" method="get">
+                                                <input type="text" value="" name="q" id="ws" placeholder="Search product..." />
                                                 <button type="submit"><i class="pe-7s-search"></i></button>
                                             </form>
                                         </li>
