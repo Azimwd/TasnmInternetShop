@@ -1,0 +1,250 @@
+{% extends "main/base.html" %}
+{% load static %}
+{% load goods_tags %}*
+{% block title %}<title>Tasnm || Shope</title>{% endblock title %}
+{% block icon %}<link rel="shortcut icon" type="image/x-icon" href="{% static 'img/favicon.ico'  %} ">{% endblock icon %}
+{% block content %}
+    <h2>
+        <h1></h1>
+    </h2>
+    <section class="contact-img-area">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-12 text-center">
+                    <div class="con-text">
+                        <h2 class="page-title">Shop</h2>
+                        <p><a href="#">Home</a> | shop</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <div class="goods_sort">
+        <form action="{% if request.GET.q %} {% url "catalog:search" %} {% else %} {%  url 'catalog:index' slug_url %} {% endif %}" method="get" data-bs-theme="dark">
+            <div class="form-check text-white mx-3">
+                <input class="form-check-input" type="checkbox" name="on_sale" id="flexCheckDefault" value="on" {% if request.GET.on_sale == 'on' %}checked{% endif %}>
+                {% if request.GET.q %}
+                    <input type="hidden" name="q" value="{{ request.GET.q }}">
+                {% endif %}
+                
+
+                <label class="form-check-label" for="flexCheckDefault">
+                    Товары по акции
+                </label>
+            </div>
+            <p class="text-white mx-3 mt-3">Сортировать:</p>
+            <div class="form-check text-white mx-3">
+                <input class="form-check-input" type="radio" name="order_by" id="flexRadioDefault1" value="default" 
+                {% if request.GET.order_by or request.GET.order_by == 'default' %}checked{% endif %}>
+            
+                <label class="form-check-label" for="flexRadioDefault1">
+                    По умолчанию
+                </label>
+            </div>
+            <div class="form-check text-white mx-3">
+                <input class="form-check-input" type="radio" name="order_by" id="flexRadioDefault2" value="price" 
+                {% if request.GET.order_by == 'price' %}checked{% endif %}>
+        
+                <label class="form-check-label" for="flexRadioDefault2">
+                    От дешевых к дорогим
+                </label>
+            </div>
+            <div class="form-check text-white mx-3">
+                <input class="form-check-input" type="radio" name="order_by" id="flexRadioDefault3" value="-price" 
+                {% if request.GET.order_by == '-price' %}checked{% endif %}>
+                <label class="form-check-label" for="flexRadioDefault3">
+                    От дорогих к дешевым
+                </label>
+            </div>
+            <button type="submit" class="btn btn-primary mx-3 mt-3">Применить</button>
+        </form>
+    </div>
+        
+
+    <section class="pages products-page section-padding-top">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-8 col-lg-9 col-sm-12">
+                    <div class="row">
+                        <div class="col-md-12 col-sm-12 col-xs-12">
+                            <div class="features-tab">
+                  
+                            <!-- Tab panes -->
+                            {% for product in goods %}
+                                <div class="tab-content">
+                                    <div role="tabpanel" class="tab-pane active" id="home">
+                                        <div class="row">
+                                            <div class="shop-tab">
+                                            <div>			
+                                        </div>
+                                    </div>
+                                    <div role="tabpanel" class="tab-pane" id="profile">
+                                        <div class="row">
+                                            <div class="li-item">
+                                                <div class="col-md-4 col-sm-4">
+                                                    <div class="tb-product-item-inner tb2 pct-last">
+                                                        <div class="pro-type">
+                                                            <span>new</span>
+                                                        </div>
+                                                        <div class="re-img">
+                                                            {% if product.image %}
+                                                                <a href="{% url 'catalog:product' product.slug %}"><img src="{{product.image.url}}" alt="" /></a>
+                                                            {% else %}
+                                                                <a href="#"><img src="{% static 'img/products/1.jpg' %}" alt="" /></a>
+                                                            {% endif %}
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="col-md-8 col-sm-8">
+                                                    <div class="f-fix">
+                                                        <div class="tb-beg">
+                                                            <a href="{% url 'catalog:product' product.slug %}">{{product.name}}</a>
+                                                        </div>
+                                                        <div class="tb-product-wrap-price-rating">
+                                                            <div class="tb-product-price font-noraure-3">
+                                                                
+                                                                
+                                                                {% if product.discount %}
+                                                                    <h4 class="amount2 ana">Скидка: {{product.discount}}%</h4>
+                                                                    <span class="amount2 ana nosell">{{product.price}} тг</span>
+                                                                    <span class="amount2 ana">{{product.sell_price}} тг</span></br>
+                                                                {% else %}
+                                                                    <span class="amount2 ana">{{product.price}} тг</span></br>
+                                                                {% endif %}
+
+                                                                <span class="product_id">ID:{{product.display_id}}</span>
+                                                            </div>
+                                                        </div>
+                                                        <p class="desc">{{product.description|truncatechars:300}}</p>
+                                                        <div class="last-cart l-mrgn ns">
+                                                            <a class="las4" href="#">Add To Cart</a>
+                                                        </div>
+                                                        <div class="tb-product-btn">
+                                                            <a href="#">
+                                                                <i class="fa fa-eye"></i>
+                                                            </a>
+                                                            <a href="#">
+                                                                <i class="fa fa-heart"></i>
+                                                            </a>
+                                                            <a href="#">
+                                                                <i class="fa fa-retweet"></i>
+                                                            </a>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            
+                                        </div>	
+                                    </div>
+                                </div>
+                            {% endfor %}
+                                
+                                <div class="shop-all-tab-cr shop-bottom">
+                                    <div class="two-part">
+                                        <div class="shop5 page">
+                                            <ul>
+                                                <li>
+                                                    {% for page in goods.paginator.page_range %}
+                                                        {% if page >= goods.number|add:-1 and page <= goods.number|add:1 %}
+                                                            <a class="{% if  goods.number == page  %} active {% endif %}" href="?{% change_programs page=page %}">{{page}}</a>
+                                                        {% endif %}
+                                                    {% endfor %}
+    
+                                                </li>
+                                            </ul>        
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="section-padding-top">
+    <div class="brand-logo">
+            <div class="barnd-bg">
+                <div class="container">
+                    <div class="row text-center">
+                        <div id="brand-logo" class="re-owl-carousel21 owl-carousel product-slider owl-theme">
+                            <div class="col-xs-12">
+                                <div class="single-brand">
+                                    <a href="#"><img src="{% static 'img/brand/1.png' %}" alt="" /></a>
+                                </div>
+                            </div>
+                            <div class="col-xs-12">
+                                <div class="single-brand">
+                                    <a href="#"><img src="{% static 'img/brand/2.png' %}" alt="" /></a>
+                                </div>
+                            </div>
+                            <div class="col-xs-12">
+                                <div class="single-brand">
+                                    <a href="#"><img src="{% static 'img/brand/3.png' %}" alt="" /></a>
+                                </div>
+                            </div>
+                            <div class="col-xs-12">
+                                <div class="single-brand">
+                                    <a href="#"><img src="{% static 'img/brand/4.png' %}" alt="" /></a>
+                                </div>
+                            </div>
+                            <div class="col-xs-12">
+                                <div class="single-brand">
+                                    <a href="#"><img src="{% static 'img/brand/5.png' %}" alt="" /></a>
+                                </div>
+                            </div>
+                            <div class="col-xs-12">
+                                <div class="single-brand">
+                                    <a href="#"><img src="{% static 'img/brand/6.png' %}" alt="" /></a>
+                                </div>
+                            </div>
+                            <div class="col-xs-12">
+                                <div class="single-brand">
+                                    <a href="#"><img src="{% static 'img/brand/1.png' %}" alt="" /></a>
+                                </div>
+                            </div>
+                            <div class="col-xs-12">
+                                <div class="single-brand">
+                                    <a href="#"><img src="{% static 'img/products/2.jpg' %}" alt="" /></a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- brand section end -->
+    <!-- service section start -->
+    <section class="re-section-padding">
+        <div class="service section-padding">
+            <div class="container">
+                <div class="row text-center">
+                    <div class="col-xs-12 col-sm-4">
+                        <div class="single-service">
+                            <i class="pe-7s-plane"></i>
+                            <h4>Free Shipping</h4>
+                            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+                        </div>
+                    </div>
+                    <div class="col-xs-12 col-sm-4">
+                        <div class="single-service res-single">
+                            <i class="pe-7s-headphones"></i>
+                            <h4>Customer Support</h4>
+                            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+                        </div>
+                    </div>
+                    <div class="col-xs-12 col-sm-4">
+                        <div class="single-service">
+                            <i class="pe-7s-refresh"></i>
+                            <h4>15 days money back</h4>
+                            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+{% endblock content %}

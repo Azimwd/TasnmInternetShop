@@ -4739,3 +4739,11 @@ h2 h1{
     background-color: #6f6f6f;
   }
 }
+
+.login_input{
+  height: 42px;
+  padding-left: 10px;
+  width: 100%;
+  border: 1px solid #d3d3d3;
+  color: #777;
+}
