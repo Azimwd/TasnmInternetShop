@@ -6,5 +6,8 @@ app_name = 'user'
 
 urlpatterns = [
     path("admin/", admin.site.urls), 
-    path("", login, name="login"), 
+    path("registration/", registration, name="registration"), 
+    path("login/", login, name="login"), 
+    path("logout/", logout, name="logout"),
+    
 ]

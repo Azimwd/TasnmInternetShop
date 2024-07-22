@@ -445,7 +445,12 @@ ul.drop-setting li,.mainmenu ul li ul li {
     color: #fff !important
 }
 /* header bottom */
-.logo {padding: 13px 0;}
+.logo {
+  padding: 27px 0;
+}
+.logo a{
+  color: white;
+}
 /* mainmenu */
 .mainmenu a {
   display: block;
@@ -545,7 +550,7 @@ ul.drop-setting li,.mainmenu ul li ul li {
   background: #fff none repeat scroll 0 0;
   padding: 20px;
   top: 100%;
-  width: 770px;
+  width: 720px;
 }
 .magamenu ul li {position: unset;}
 .magamenu ul li.drop-icon:hover::after,.magamenu ul li ul li{
@@ -2529,7 +2534,8 @@ h4.yith-wcwl-share-title {
     vertical-align: middle;
 }
 .checkout-coupon.top.log.a-an, .checkout-coupon.top-down.log.a-an {
-    margin-bottom: 40px;
+    margin-bottom: 10px;
+    margin-top: 30px;
 }
 .inline2 > input {
     margin-right: 11px;
@@ -2550,7 +2556,8 @@ h4.yith-wcwl-share-title {
   text-align: center;
   text-transform: uppercase;
   transition: all 0.4s ease 0s;
-  width: 120px;
+  width: 200px;
+
 }
 .tb-login-form > form > p.login-submit5 > input:hover {
     background: #ef6644 none repeat scroll 0 0;
@@ -4622,7 +4629,7 @@ input.cart-plus-minus-box {
 }
 .contact-img-area {
   background-color: transparent;
-  background-image: url("../img/bg-banner/bg-pagetitle.jpg");
+  background-image: url("../Images/slide2.jpg");
   background-position: center top;
   background-repeat: no-repeat;
   padding: 200px 0 100px;
@@ -4720,7 +4727,9 @@ h2 h1{
   .goods_sort button:hover{
     background-color: #6f6f6f;
   }
-  
+  /* .slides{
+    display: none;
+  } */
 }
 
 @media only screen and (min-device-width: 768px) and (max-device-width: 1024px) {
@@ -4738,6 +4747,9 @@ h2 h1{
   .goods_sort button:hover{
     background-color: #6f6f6f;
   }
+  /* .slides{
+    display: none;
+  } */
 }
 
 .login_input{
