@@ -1,0 +1,230 @@
+[
+    {
+        "model": "goods.products",
+        "pk": 1,
+        "fields": {
+            "name": "Рубашка стиль-1",
+            "slug": "rubashka-stil-1",
+            "description": "Базовая модель выполнена из легкой ткани. Хлопок в составе обладает воздухопроницаемостью и мягкостью, не электризуется и отлично держит форму. Свободный силуэт не ограничивает движений, делая модель отличным выбором для повседневной носки.",
+            "image": "goods_images/FBE21045_186MC_20.jpg",
+            "image2": "goods_images/FBE21045_186MC_30_Cnso4GR.jpg",
+            "image3": "goods_images/FBE21045_186MC_40_2M3pae0.jpg",
+            "image4": "goods_images/FBE21045_186MC_50_DVyPgmC.jpg",
+            "image5": "goods_images/FBE21045_186MC_60_ayVWFxf.jpg",
+            "image6": "goods_images/FBE21045_186MC_70_HUXdhNv.jpg",
+            "price": "25000.00",
+            "discount": "10.00",
+            "quantity": 50,
+            "category": 2
+        }
+    },
+    {
+        "model": "goods.products",
+        "pk": 2,
+        "fields": {
+            "name": "Рубашка стиль-2",
+            "slug": "rubashka-stil-2",
+            "description": "Базовая модель выполнена из легкой ткани. Хлопок в составе обладает воздухопроницаемостью и мягкостью, не электризуется и отлично держит форму. Свободный силуэт не ограничивает движений, делая модель отличным выбором для повседневной носки.",
+            "image": "goods_images/FBE21045_532MC_20_7HDUmTD.jpg",
+            "image2": "goods_images/FBE21045_532MC_30_toCYScD.jpg",
+            "image3": "goods_images/FBE21045_532MC_40_6iyvpEm.jpg",
+            "image4": "goods_images/FBE21045_532MC_50_4nD22ot.jpg",
+            "image5": "goods_images/FBE21045_532MC_70_NwZihWR.jpg",
+            "image6": "goods_images/FBE21045_532MC_80_x1WjNtQ.jpg",
+            "price": "24000.00",
+            "discount": "11.99",
+            "quantity": 50,
+            "category": 2
+        }
+    },
+    {
+        "model": "goods.products",
+        "pk": 3,
+        "fields": {
+            "name": "Рубашка стиль-3",
+            "slug": "rubashka-stil-3",
+            "description": "Базовая модель выполнена из легкой ткани. Хлопок в составе обладает воздухопроницаемостью и мягкостью, не электризуется и отлично держит форму. Свободный силуэт не ограничивает движений, делая модель отличным выбором для повседневной носки.",
+            "image": "goods_images/FAD21035_504MC_10_PXwb9UQ.jpg",
+            "image2": "goods_images/FAD21035_504MC_20_iydFid2.jpg",
+            "image3": "goods_images/FAD21035_504MC_30_kgt1tAP.jpg",
+            "image4": "goods_images/FAD21035_504MC_40_ao63RKC.jpg",
+            "image5": "goods_images/FAD21035_504MC_50_fTm7cIB.jpg",
+            "image6": "goods_images/FAD21035_504MC_70_qkF5eOE.jpg",
+            "price": "23000.00",
+            "discount": "14.00",
+            "quantity": 50,
+            "category": 2
+        }
+    },
+    {
+        "model": "goods.products",
+        "pk": 4,
+        "fields": {
+            "name": "Рубашка стиль-4",
+            "slug": "rubashka-stil-4",
+            "description": "Базовая модель выполнена из легкой ткани. Хлопок в составе обладает воздухопроницаемостью и мягкостью, не электризуется и отлично держит форму. Свободный силуэт не ограничивает движений, делая модель отличным выбором для повседневной носки.",
+            "image": "goods_images/FSE21082_124_20_ZpWQBwZ.jpg",
+            "image2": "goods_images/FSE21082_124_30_wyLs8Ya.jpg",
+            "image3": "goods_images/FSE21082_124_40_ydqXJRv.jpg",
+            "image4": "goods_images/FSE21082_124_50_nOX7Kmw.jpg",
+            "image5": "goods_images/FSE21082_124_70_343Y7UT.jpg",
+            "image6": "goods_images/FSE21082_124_80_mVWhM61.jpg",
+            "price": "21000.00",
+            "discount": "99.00",
+            "quantity": 1,
+            "category": 2
+        }
+    },
+    {
+        "model": "goods.products",
+        "pk": 5,
+        "fields": {
+            "name": "Рубашка стиль-5",
+            "slug": "rubashka-stil-5",
+            "description": "Базовая модель выполнена из легкой ткани. Хлопок в составе обладает воздухопроницаемостью и мягкостью, не электризуется и отлично держит форму. Свободный силуэт не ограничивает движений, делая модель отличным выбором для повседневной носки.",
+            "image": "goods_images/FSE21082_201_20_hCSsZY7.jpg",
+            "image2": "goods_images/FSE21082_201_30_yY6hkKg.jpg",
+            "image3": "goods_images/FSE21082_201_40_t7F5Ipc.jpg",
+            "image4": "goods_images/FSE21082_201_50_SjhtaNC.jpg",
+            "image5": "goods_images/FSE21082_201_70_kq7TnP5.jpg",
+            "image6": "goods_images/FSE21082_201_80_RH6EVxR.jpg",
+            "price": "20000.00",
+            "discount": "5.00",
+            "quantity": 22,
+            "category": 2
+        }
+    },
+    {
+        "model": "goods.products",
+        "pk": 6,
+        "fields": {
+            "name": "Рубашка стиль-6",
+            "slug": "rubashka-stil-6",
+            "description": "Базовая модель выполнена из легкой ткани. Хлопок в составе обладает воздухопроницаемостью и мягкостью, не электризуется и отлично держит форму. Свободный силуэт не ограничивает движений, делая модель отличным выбором для повседневной носки.",
+            "image": "goods_images/FSE210100_101_20_5tEyxXT.jpg",
+            "image2": "goods_images/FSE210100_101_30_4XnCz0P.jpg",
+            "image3": "goods_images/FSE210100_101_40_TgMmLMf.jpg",
+            "image4": "goods_images/FSE210100_101_50_nSY0KX4.jpg",
+            "image5": "goods_images/FSE210100_101_70_HFO5au7.jpg",
+            "image6": "goods_images/FSE210100_101_80_dtQUL5Z.jpg",
+            "price": "20000.00",
+            "discount": "12.00",
+            "quantity": 14,
+            "category": 2
+        }
+    },
+    {
+        "model": "goods.products",
+        "pk": 7,
+        "fields": {
+            "name": "Рубашка стиль-7",
+            "slug": "rubashka-stil-7",
+            "description": "Базовая модель выполнена из легкой ткани. Хлопок в составе обладает воздухопроницаемостью и мягкостью, не электризуется и отлично держит форму. Свободный силуэт не ограничивает движений, делая модель отличным выбором для повседневной носки.",
+            "image": "goods_images/FSE210100_211_20_BtDQs5C.jpg",
+            "image2": "goods_images/FSE210100_211_30_VHGVGbV.jpg",
+            "image3": "goods_images/FSE210100_211_40_keT0Oki.jpg",
+            "image4": "goods_images/FSE210100_211_50_Y66RNVA.jpg",
+            "image5": "goods_images/FSE210100_211_70_5HBam0v.jpg",
+            "image6": "goods_images/FSE210100_211_80_kTxIVSM.jpg",
+            "price": "21000.00",
+            "discount": "16.00",
+            "quantity": 24,
+            "category": 2
+        }
+    },
+    {
+        "model": "goods.products",
+        "pk": 8,
+        "fields": {
+            "name": "Рубашка стиль-8",
+            "slug": "rubashka-stil-8",
+            "description": "Базовая модель выполнена из легкой ткани. Хлопок в составе обладает воздухопроницаемостью и мягкостью, не электризуется и отлично держит форму. Свободный силуэт не ограничивает движений, делая модель отличным выбором для повседневной носки.",
+            "image": "goods_images/FSE210111_124_20_696zt3U.jpg",
+            "image2": "goods_images/FSE210111_124_30_A1ZPgRg.jpg",
+            "image3": "goods_images/FSE210111_124_40_DaK4DRL.jpg",
+            "image4": "goods_images/FSE210111_124_50_8VJsvyO.jpg",
+            "image5": "goods_images/FSE210111_124_70_Yhv9rHD.jpg",
+            "image6": "goods_images/FSE210111_124_80_JE8xDzB.jpg",
+            "price": "23000.00",
+            "discount": "30.00",
+            "quantity": 54,
+            "category": 2
+        }
+    },
+    {
+        "model": "goods.products",
+        "pk": 9,
+        "fields": {
+            "name": "Рубашка стиль-9",
+            "slug": "rubashka-stil-9",
+            "description": "Базовая модель выполнена из легкой ткани. Хлопок в составе обладает воздухопроницаемостью и мягкостью, не электризуется и отлично держит форму. Свободный силуэт не ограничивает движений, делая модель отличным выбором для повседневной носки.",
+            "image": "goods_images/FSE210111_201_20_e1jek4S.jpg",
+            "image2": "goods_images/FSE210111_201_30_Of7mifD.jpg",
+            "image3": "goods_images/FSE210111_201_40_xCD6Wxj.jpg",
+            "image4": "goods_images/FSE210111_201_50_B8fqnDF.jpg",
+            "image5": "goods_images/FSE210111_201_70_WxVcVFv.jpg",
+            "image6": "goods_images/FSE210111_201_80_cCIlDkE.jpg",
+            "price": "31000.00",
+            "discount": "20.00",
+            "quantity": 53,
+            "category": 2
+        }
+    },
+    {
+        "model": "goods.products",
+        "pk": 10,
+        "fields": {
+            "name": "Рубашка стиль-10",
+            "slug": "rubashka-stil-10",
+            "description": "Базовая модель выполнена из легкой ткани. Хлопок в составе обладает воздухопроницаемостью и мягкостью, не электризуется и отлично держит форму. Свободный силуэт не ограничивает движений, делая модель отличным выбором для повседневной носки.",
+            "image": "goods_images/FWD21040_105_20_Yf33Lcp.jpg",
+            "image2": "goods_images/FWD21040_105_30_70xbAda.jpg",
+            "image3": "goods_images/FWD21040_105_50_c5fd2Lw.jpg",
+            "image4": "goods_images/FWD21040_105_70_2NASnTs.jpg",
+            "image5": "goods_images/FWD21040_105_80_5dsQuD6.jpg",
+            "image6": "goods_images/FWD21040_105_90_LsjQK5I.jpg",
+            "price": "31000.00",
+            "discount": "10.00",
+            "quantity": 41,
+            "category": 2
+        }
+    },
+    {
+        "model": "goods.products",
+        "pk": 11,
+        "fields": {
+            "name": "Рубашка стиль-11",
+            "slug": "rubashka-stil-11",
+            "description": "Базовая модель выполнена из легкой ткани. Хлопок в составе обладает воздухопроницаемостью и мягкостью, не электризуется и отлично держит форму. Свободный силуэт не ограничивает движений, делая модель отличным выбором для повседневной носки.",
+            "image": "goods_images/FWD21053_101_20_gS5FapH.jpg",
+            "image2": "goods_images/FWD21053_101_30_jcILfWG.jpg",
+            "image3": "goods_images/FWD21053_101_50_YiphJgq.jpg",
+            "image4": "goods_images/FWD21053_101_70_H0wZiOy.jpg",
+            "image5": "goods_images/FWD21053_101_80_5qEH0zR.jpg",
+            "image6": "goods_images/FWD21053_101_90_gwCzsns.jpg",
+            "price": "25000.00",
+            "discount": "5.00",
+            "quantity": 39,
+            "category": 2
+        }
+    },
+    {
+        "model": "goods.products",
+        "pk": 12,
+        "fields": {
+            "name": "Рубашка стиль-12",
+            "slug": "rubashka-stil-12",
+            "description": "Базовая модель выполнена из легкой ткани. Хлопок в составе обладает воздухопроницаемостью и мягкостью, не электризуется и отлично держит форму. Свободный силуэт не ограничивает движений, делая модель отличным выбором для повседневной носки.",
+            "image": "goods_images/FWD21053_520_20_yjxFbvH.jpg",
+            "image2": "goods_images/FWD21053_520_30_KEuoKkv.jpg",
+            "image3": "goods_images/FWD21053_520_40_3twv1Qb.jpg",
+            "image4": "goods_images/FWD21053_520_50_IreTlvw.jpg",
+            "image5": "goods_images/FWD21053_520_70_u6EEv1U.jpg",
+            "image6": "goods_images/FWD21053_520_80_ggPf42V.jpg",
+            "price": "30000.00",
+            "discount": "41000.00",
+            "quantity": 12000,
+            "category": 2
+        }
+    }
+]

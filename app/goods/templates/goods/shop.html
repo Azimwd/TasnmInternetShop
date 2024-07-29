@@ -99,7 +99,17 @@
                                                 <div class="col-md-8 col-sm-8">
                                                     <div class="f-fix">
                                                         <div class="tb-beg">
-                                                            <a href="{% url 'catalog:product' product.slug %}">{{product.name}}</a>
+                                                            <a href="{% url 'catalog:product' product.slug %}">
+                                                                
+                                                                {% autoescape off %}
+                                                                    {% if product.headline %}
+                                                                        {{product.headline}}
+                                                                    {% else %}
+                                                                        {{product.name}}
+                                                                    {% endif %}
+                                                                {% endautoescape %}
+                                                                
+                                                            </a>
                                                         </div>
                                                         <div class="tb-product-wrap-price-rating">
                                                             <div class="tb-product-price font-noraure-3">
@@ -116,7 +126,15 @@
                                                                 <span class="product_id">ID:{{product.display_id}}</span>
                                                             </div>
                                                         </div>
-                                                        <p class="desc">{{product.description|truncatechars:300}}</p>
+                                                        <p class="desc">       
+                                                            {% autoescape off %}
+                                                                {% if product.bodyline %}
+                                                                    {{product.bodyline|truncatechars:100}}
+                                                                {% else %}
+                                                                    {{product.description|truncatechars:35}}
+                                                                {% endif %}
+                                                            {% endautoescape %}
+                                                        </p>
                                                         <div class="last-cart l-mrgn ns">
                                                             <a class="las4" href="#">Add To Cart</a>
                                                         </div>
