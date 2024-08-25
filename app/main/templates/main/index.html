@@ -30,7 +30,7 @@
                         <!-- layer 3 -->
                         <div class="layer-3">
                             {% tag_categories as categories%}
-                            <a class="min1" href="{% url 'catalog:index' categories.1.slug %}">Купить сейчас</a>
+                            <a class="min1" href="{% url 'catalog:index' categories.0.slug %}">Купить сейчас</a>
                         </div>
                     </div>
                 </div>
@@ -50,7 +50,7 @@
                         <!-- layer 3 -->
                         <div class="layer-3">
                             {% tag_categories as categories%}
-                            <a class="min1" href="{% url 'catalog:index' categories.1.slug %}">Купить сейчас</a>
+                            <a class="min1" href="{% url 'catalog:index' categories.0.slug %}">Купить сейчас</a>
                         </div>
                     </div>
                 </div>

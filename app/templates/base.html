@@ -147,38 +147,14 @@
                                                 <button type="submit"><i class="pe-7s-search"></i></button>
                                             </form>
                                         </li>
-                                        <li class="mobile_shopping_cart"><a href="#" cla><i class="fa fa-shopping-cart"></i><span class="color1">2</span></a>
+                                        <li class="mobile_shopping_cart"><a href="{% url 'user:users_cart' %}" cla><i class="fa fa-shopping-cart"></i><span class="color1">2</span></a>
                                             <ul class="drop-cart">
-                                                <li>
-                                                    <a href="cart.html"><img src="{% static 'img/cart/1.png' %}" alt="" /></a>
-                                                    <div class="add-cart-text">
-                                                        <p><a href="#">Белая рубашка</a></p>
-                                                        <p>10 000 тг</p>
-                                                        <span>Цвет: синий</span>
-                                                        <span>Размер   : XL</span>
-                                                    </div>
-                                                    <div class="pro-close">
-                                                        <i class="pe-7s-close"></i>
-                                                    </div>
-                                                </li>
-                                                <li>
-                                                    <a href="cart.html"><img src="{% static 'img/cart/2.png' %}" alt="" /></a>
-                                                    <div class="add-cart-text">
-                                                        <p><a href="#">Белая рубашка</a></p>
-                                                        <p>10 000 тг x 2</p>
-                                                        <span>Цвет: синий</span>
-                                                        <span>Размер   : XL</span>
-                                                    </div>
-                                                    <div class="pro-close">
-                                                        <i class="pe-7s-close"></i>
-                                                    </div>
-                                                </li>
-                                                <li class="total-amount clearfix">
-                                                    <span class="floatleft">Итог</span>
-                                                    <span class="floatright"><strong>= $150.00</strong></span>
-                                                </li>
+                                                
+												{% include "carts/includes/included_cart.html" %}
+                                                
+                                                
                                                 <li class="checkout-btn text-center">
-                                                    <a href="checkout.html">перейти в корзину</a>
+                                                    <a href="{% url 'user:users_cart' %} ">перейти в корзину</a>
                                                 </li>
                                             </ul>
                                         </li>

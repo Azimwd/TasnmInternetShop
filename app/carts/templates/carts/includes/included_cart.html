@@ -1,0 +1,31 @@
+{% load static %}
+{% load cart_tags %}
+
+{% user_carts request as carts %}
+
+{% for cart in carts %}
+    <li>
+    
+        <a href=" {% url 'catalog:product' cart.product.slug %} "><img width="62px"  src="{{cart.product.image.url}}" alt="" /></a>
+        <div class="add-cart-text">
+            <p><a href="{% url 'catalog:product' cart.product.slug %}">{{ cart.product.name }}</a></p>
+            <p>{{ cart.products_price }}</p>
+  
+        </div>
+        <div class="pro-close">
+            <a href="{% url 'cart:cart_remove' cart.id %}">
+                <i class="pe-7s-close"></i>
+            </a>
+        </div><br>
+        <div class="quantity ray">
+            <input class="input-text qty text" type="number" size="4" title="Qty" value="{{ cart.quantity}}" min="0" step="1">
+        </div>
+    </li>
+
+
+{% endfor %}
+
+<li class="total-amount clearfix">
+    <span class="floatleft">Итог</span>
+    <span class="floatright"><strong>= {{ carts.total_price }}тг</strong></span>
+</li>

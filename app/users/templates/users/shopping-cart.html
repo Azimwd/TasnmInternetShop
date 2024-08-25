@@ -1,0 +1,31 @@
+{% extends "base.html" %}
+{% load static %}
+{% load goods_tags %}
+
+{% load cart_tags %}
+{% user_carts request as carts %}
+
+{% block title %}<title>Цунами || Магазин</title>{% endblock title %}
+{% block icon %}<link rel="shortcut icon" type="image/x-icon" href="{% static 'img/favicon.ico'  %} ">{% endblock icon %}
+{% block content %}
+        <!-- pages-title-start -->
+		<section class="contact-img-area">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-12 text-center">
+                        <div class="con-text">
+                            <h2 class="page-title">Shopping Cart</h2>
+                            <p><a href="#">Home</a> | Shopping Cart</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+		<!-- pages-title-end -->
+		<!-- shopping-cart content section start -->
+        <div class="shopping-cart-area s-cart-area">
+            {% include "carts/includes/include_shoping-cart.html" %}
+            
+            
+        </div>
+{% endblock content %}

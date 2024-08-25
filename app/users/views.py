@@ -63,3 +63,11 @@ def profile(request):
         'form': form,
     }
     return render(request, "users/my-account.html", context)
+
+def users_cart(request):
+    
+        
+    # context = {
+    #     'form': form,
+    # }
+    return render(request, "users/shopping-cart.html")

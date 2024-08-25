@@ -1,0 +1,82 @@
+{% load static %}
+{% load cart_tags %}
+{% load goods_tags %}
+{% user_carts request as carts %}
+
+
+<div class="container">
+    <div class="row">
+        <div class="col-md-12 col-xs-12">
+            <div class="s-cart-all">
+                <div class="cart-form table-responsive">
+                    {% comment %} {% include "carts/include/included_cart.html" %} {% endcomment %}
+                    <table id="shopping-cart-table" class="data-table cart-table">
+                        <tr>
+                            <th class="low1">Product</th>
+                            <th class="low7">Quantity</th>
+                            <th class="low7">Price</th>
+                            <th class="low7">Total</th>
+                        </tr>
+                        {% for cart in carts %}
+                            
+                            <tr>
+                                <td class="sop-cart an-shop-cart">
+                                    <a href=" {% url 'catalog:product' cart.product.slug %} "><img width="62px"  src="{{cart.product.image.url}}" alt="" /></a>
+                                    <a href="#">{{ cart.product.name }}</a>
+                                    
+                                </td>
+                                <td class="sop-cart an-sh">
+                                    <div class="quantity ray">
+                                        <input class="input-text qty text" type="number" size="4" title="Qty" value="{{ cart.quantity}}" min="0" step="1">
+                                    </div>
+                                    <a href="{% url 'cart:cart_remove' cart.id %}">
+                                        <span>x</span>
+                                    </a>
+                                </td>
+                                <td class="sop-cart">
+                                    <div class="tb-product-price font-noraure-3">
+                                        <span class="amount">{{ cart.product.sell_price }} тг</span>
+                                    </div>
+                                </td>
+                                <td class="cen">
+                                    <span class="amount">{{ cart.products_price }} тг</span>
+                                </td>
+                            </tr>
+                        {% endfor %}
+                    </table>
+                </div>
+                
+            </div>
+        </div>
+    </div>
+    <div class="row">
+        <div class="second-all-class">
+        
+            <div class="col-md-5 col-sm-12 col-xs-12">
+                <div class="sub-total">
+                    <table>
+                        <tbody>
+                            <tr class="order-total">
+                                <th>Total:</th>
+                                <td>
+                                    <strong>
+                                        <span class="amount">{{carts.total_price}}</span>
+                                    </strong>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+                <div class="wc-proceed-to-checkout">
+                    <p class="return-to-shop">
+                        {% tag_categories as categories%}
+                        <a class="button wc-backward" href="{% url 'catalog:index' categories.0.slug %}">Продолжить покупки</a>
+                    </p>
+                    {% if carts %}
+                    <a class="wc-forward" href="#">Подтвердить заказ</a>{% endif %}
+                    
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

@@ -129,24 +129,19 @@
                                                         <p class="desc">       
                                                             {% autoescape off %}
                                                                 {% if product.bodyline %}
-                                                                    {{product.bodyline|truncatechars:100}}
+                                                                    {{product.bodyline|truncatechars:300}}
                                                                 {% else %}
-                                                                    {{product.description|truncatechars:35}}
+                                                                    {{product.description|truncatechars:300}}
                                                                 {% endif %}
                                                             {% endautoescape %}
                                                         </p>
                                                         <div class="last-cart l-mrgn ns">
-                                                            <a class="las4" href="#">Add To Cart</a>
+                                                            <a class="las4" href="{% url "cart:cart_add" product.slug %}">Add To Cart</a>
                                                         </div>
                                                         <div class="tb-product-btn">
-                                                            <a href="#">
-                                                                <i class="fa fa-eye"></i>
-                                                            </a>
+                                                           
                                                             <a href="#">
                                                                 <i class="fa fa-heart"></i>
-                                                            </a>
-                                                            <a href="#">
-                                                                <i class="fa fa-retweet"></i>
                                                             </a>
                                                         </div>
                                                     </div>
