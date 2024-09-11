@@ -351,6 +351,7 @@ ul.drop-setting li,.mainmenu ul li ul li {
 /* add to cart */
 .drop-cart li span,.total-amount span{position:inherit;color:#666666;}
 .right-header ul.drop-cart {
+  overflow: scroll;
   padding: 15px 20px;
   right: 0;
   width: 250px;
@@ -361,6 +362,7 @@ ul.drop-setting li,.mainmenu ul li ul li {
 }
 .right-header ul.drop-cart,.mainmenu ul li ul  {
     width: 237px;
+    height: 500px;
 }
 .drop-cart img {
     float: left;
@@ -4758,4 +4760,14 @@ h2 h1{
   width: 100%;
   border: 1px solid #d3d3d3;
   color: #777;
+}
+
+.minus_btn{
+  padding-top: 3%;
+  padding-left: 37%;
+}
+
+.plus_btn{
+  padding-top: 3%;
+  padding-left: 5%;
 }

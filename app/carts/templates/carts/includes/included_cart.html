@@ -5,7 +5,6 @@
 
 {% for cart in carts %}
     <li>
-    
         <a href=" {% url 'catalog:product' cart.product.slug %} "><img width="62px"  src="{{cart.product.image.url}}" alt="" /></a>
         <div class="add-cart-text">
             <p><a href="{% url 'catalog:product' cart.product.slug %}">{{ cart.product.name }}</a></p>
@@ -16,10 +15,29 @@
             <a href="{% url 'cart:cart_remove' cart.id %}">
                 <i class="pe-7s-close"></i>
             </a>
-        </div><br>
-        <div class="quantity ray">
-            <input class="input-text qty text" type="number" size="4" title="Qty" value="{{ cart.quantity}}" min="0" step="1">
         </div>
+        <div class="quantity ray">
+            <input class="input-text qty text" type="text" size="1"value="{{ cart.quantity}}" readonly>
+            {% comment %} <input type="text" class="form-control number" size="1" value="{{ cart.quantity }}"readonly> {% endcomment %}
+            <span class="input-group-btn minus_btn">
+                <button type="button" class="btn btn-dark btn-sm decrement"
+                    data-cart-id="{{ cart.id }}"
+                    data-cart-change-url="{% url "cart:cart_change" %}">
+                    {% csrf_token %} -</button>
+            </span>
+            
+            
+            <span class="input-group-btn plus_btn">
+                <button type="button" class="btn btn-dark btn-sm increment"
+                    data-cart-id="{{ cart.id }}"
+                    data-cart-change-url="{% url "cart:cart_change" %}">
+                    {% csrf_token %}
+                    +</button>
+            </span>
+            
+           
+        </div>
+        
     </li>
 
 
