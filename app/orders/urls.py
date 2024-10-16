@@ -5,6 +5,6 @@ from orders.views import *
 app_name = 'orders'
 
 urlpatterns = [
-    path("craete_order/", craete_order, name="craete_order"),
+    path("create_order/", create_order, name="create_order"),
 
 ]
