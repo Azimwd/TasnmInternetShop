@@ -1,0 +1,59 @@
+{% load static %}
+{% load cart_tags %}
+
+{% user_carts request as carts %}
+
+{% for cart in carts %}
+
+    <div class="ro-body">
+        <div class="ro-item">
+            <div class="ro-image">
+                <a href="#">
+                    <a href=" {% url 'catalog:product' cart.product.slug %} "><img width="62px"  src="{{cart.product.image.url}}" alt="" /></a>
+                </a>
+            </div>
+            <div>
+                <div class="tb-beg">
+                    <a href="{% url 'catalog:product' cart.product.slug %}">{{ cart.product.name }}</a>
+                </div>
+                
+            </div>
+            <div>
+                <div class="ro-price">
+                    <span class="amount"><p>{{ cart.product.sell_price }} тг</p></span>
+                </div>
+                <div class="ro-quantity">
+                    <strong class="product-quantity">× {{ cart.quantity}}</strong>
+                   
+                    
+            
+                </div>
+                <div class="product-total">
+                    <span class="amount">{{ cart.products_price }} тг</span>
+                    <a href="{% url 'cart:cart_remove' cart.id %}">
+                        <i class="pe-7s-close"></i>
+                    </a>
+                </div>
+            </div>
+            
+        </div>
+        
+    </div>
+    <div class="ro-footer">
+
+    </div>
+  
+
+{% endfor %}
+<div class="ro-footer">
+    <div>
+        <p>
+            Total
+            <span>
+                <strong>
+                    <span class="amount">{{ carts.total_price }} тг</span>
+                </strong>
+            </span>
+        </p>
+    </div>
+</div>
